@@ -1,0 +1,19 @@
+{% extends 'kbo_player/base.html' %}
+
+    {% block content %}
+
+    <tr class="thead-dark">
+        <th>이름</th>
+        <th>포지션</th>
+        <th>팀</th>
+        </tr>
+        {% for player in players %}
+    <tr class="table-light">
+        <td>
+            <a href="{% url 'kbo_player_detail' pk=player.pk%}">{{player.name}}</a> </td>
+        <td>{{player.position}}</td>
+        <td>{{player.team}}</td>
+    </tr>
+    {% endfor %}
+    {% endblock %}}
+
