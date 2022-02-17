@@ -15,8 +15,10 @@ class Kboplayer(models.Model):
     team = models.CharField(max_length=10,choices=team_choices,default=None) #소속팀명
     position = models.CharField(max_length=5,choices=position_choices,default=None) #포지션
     year_money = models.CharField(max_length=1000,null=True)
+    year = models.CharField(max_length=100,null=True)
     created_date = models.DateTimeField(default=timezone.now)
     update_date = models.DateTimeField(blank=True,null=True)
+    attack_or_attacked = models.CharField(max_length=100,null=True)
 
 
 
@@ -24,4 +26,5 @@ class Kboplayer(models.Model):
         self.published_date = timezone.now()
         self.save()
     def __str__(self):
-        return self.name
+        return self.name + '(' + self.year + ')'
+

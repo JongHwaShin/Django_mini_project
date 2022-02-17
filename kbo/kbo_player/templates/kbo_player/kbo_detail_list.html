@@ -13,51 +13,24 @@
   <tbody>
 
     <tr class="table-secondary">
-      <th scope="row">2021</th>
+      <th scope="row">{{players_detail.year}}</th>
       <td>{{players_detail.name}}</td>
       <td>{{players_detail.team}}</td>
       <td>{{players_detail.year_money}}</td>
-      <td>Column content</td>
+      <td>{{players_detail.attack_or_attacked}}</td>
     </tr>
-    <tr class="table-success">
-      <th scope="row">Success</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="table-danger">
-      <th scope="row">Danger</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="table-warning">
-      <th scope="row">Warning</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="table-info">
-      <th scope="row">Info</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="table-light">
-      <th scope="row">Light</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr class="table-dark">
-      <th scope="row">Dark</th>
-      <td>Column content</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
+
+
   </tbody>
 </table>
 </table>
+<a class="btn btn-primary" href="{% url 'kbo_player_edit' pk=players_detail.pk %}">
+     <span class="btn-primary">선수수정</span>
+   </a>
+<a class="btn btn-primary" href="{% url 'kbo_player_remove' pk=players_detail.pk %}">
+     <span class="btn-primary">선수삭제</span>
+   </a>
+
 
 
 
