@@ -1,5 +1,64 @@
 {% extends 'kbo_player/base.html' %}
     {% block content %}
-    <h3>{{players_detail.name}}</h3>
+    <table class="table table-hover">
+  <thead>
+    <tr>
+        <th scope="col">년도</th>
+      <th scope="col">이름</th>
+      <th scope="col">팀명</th>
+      <th scope="col">연봉</th>
+      <th scope="col">타율/방어율</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="table-secondary">
+      <th scope="row">2021</th>
+      <td>{{players_detail.name}}</td>
+      <td>{{players_detail.team}}</td>
+      <td>{{players_detail.year_money}}</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-success">
+      <th scope="row">Success</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">Danger</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-warning">
+      <th scope="row">Warning</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">Info</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">Light</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr class="table-dark">
+      <th scope="row">Dark</th>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+</table>
+
+
 
     {% endblock %}}

@@ -16,16 +16,16 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
+          <a class="nav-link active" href="{% url 'kbo_player_list'%}">Home
+
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#">연봉순위</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a cass="nav-link" href="#">팀</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -38,10 +38,7 @@
           </div>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
     </div>
   </div>
 </nav>
@@ -51,6 +48,19 @@
     {% endblock %}
 
     </tbody>
+
+
 </table>
+    <script type="text/javascript">
+      function moveNewPlayer(){
+        location.href = "{% url 'kbo_player_new' %}";
+      }
+
+    </script>
+    <button type="button" class="btn btn-primary" onclick="moveNewPlayer()">선수추가</button>
+
+
+
 </div>
+
 </html>
