@@ -1,8 +1,8 @@
 
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Kboplayer
-from .forms import PlayerForm
+from .models import Kboplayer,Comment
+from .forms import PlayerForm,CommentForm
 
 
 
@@ -47,3 +47,23 @@ def kbo_player_remove(request,pk):
     kbo_player = Kboplayer.objects.get(pk=pk)
     kbo_player.delete()
     return redirect('kbo_player_list')
+
+
+def add_comment_to_player(request,pk):
+    kbo_player = Kboplayer.objects.get(pk=pk)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.player_post = kbo_player
+            comment.save()
+            return redirect('kbo_player_detail',pk=kbo_player.pk)
+    else:
+        form = CommentForm()
+    return render(request,'kbo_player/add_comment_to_player.html',{'form':form})
+
+def comment_remove(request,pk):
+    comment = Comment.objects.get(pk=pk)
+    player_pk = comment.player_post.pk
+    comment.delete()
+    return redirect('kbo_player_detail',pk=player_pk)

@@ -8,4 +8,6 @@ urlpatterns = [
     path('player/new/',views.kbo_player_new,name= 'kbo_player_new'),
     path('player/<int:pk>/edit',views.kbo_player_edit,name='kbo_player_edit'),
     path('player/<int:pk>/remove',views.kbo_player_remove,name='kbo_player_remove'),
+    path('player/<int:pk>/comment/',views.add_comment_to_player,name='add_comment_to_player'),
+    path('comment/<int:pk>/remove/',views.comment_remove,name='comment_remove'),
 ]

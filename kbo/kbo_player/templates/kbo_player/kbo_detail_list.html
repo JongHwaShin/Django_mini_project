@@ -24,12 +24,28 @@
   </tbody>
 </table>
 </table>
+<hr>
+{% for comment in players_detail.comments.all %}
+    <div class = "cm-comment">
+        <div class = "date">{{comment.created_date}}</div>
+            <a class="btn btn-outline-primary" href="{% url 'comment_remove' pk=comment.pk%}">
+                댓글삭제
+            </a>
+
+        <div><strong>{{comment.author}}</strong></div>
+        <div><p>{{comment.text|linebreaks}}</p></div>
+
+    </div>
+    {% empty %}
+        <p> 댓글이 없습니다!</p>
+{% endfor %}
 <a class="btn btn-primary" href="{% url 'kbo_player_edit' pk=players_detail.pk %}">
      <span class="btn-primary">선수수정</span>
    </a>
 <a class="btn btn-primary" href="{% url 'kbo_player_remove' pk=players_detail.pk %}">
      <span class="btn-primary">선수삭제</span>
    </a>
+<a class="btn btn-primary" href="{% url 'add_comment_to_player' pk=players_detail.pk%}">댓글달기</a>
 
 
 

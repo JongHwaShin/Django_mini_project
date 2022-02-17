@@ -20,11 +20,17 @@ class Kboplayer(models.Model):
     update_date = models.DateTimeField(blank=True,null=True)
     attack_or_attacked = models.CharField(max_length=100,null=True)
 
-
-
     def publish(self):
         self.published_date = timezone.now()
         self.save()
     def __str__(self):
         return self.name + '(' + self.year + ')'
 
+class Comment(models.Model):
+    player_post = models.ForeignKey('kbo_player.Kboplayer',on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=100)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now())
+
+    def __str__(self):
+        return self.text
