@@ -1,0 +1,54 @@
+{% extends 'kbo_player/base.html' %}
+    {% block content %}
+
+   <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">순위</th>
+        <th scope="col">선수명</th>
+      <th scope="col">팀명</th>
+      <th scope="col">AVG</th>
+      <th scope="col">G</th>
+      <th scope="col">PA</th>
+        <th scope="col">AB</th>
+        <th scope="col">R</th>
+        <th scope="col">H</th>
+        <th scope="col">2B</th>
+        <th scope="col">3B</th>
+        <th scope="col">HR</th>
+        <th scope="col">TB</th>
+        <th scope="col">RBI</th>
+        <th scope="col">SAC</th>
+        <th scope="col">SF</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for player in batters %}
+    <tr class="table-secondary">
+      <th scope="row">{{player.순위}}</th>
+      <td>{{player.선수명}}</td>
+      <td>{{player.팀명}}</td>
+      <td>{{player.avg}}</td>
+      <td>{{player.g}}</td>
+      <td>{{player.pa}}</td>
+        <td>{{player.ab}}</td>
+        <td>{{player.r}}</td>
+        <td>{{player.h}}</td>
+        <td>{{player.number_2b}}</td>
+        <td>{{player.number_3b}}</td>
+        <td>{{player.hr}}</td>
+        <td>{{player.tb}}</td>
+        <td>{{player.rbi}}</td>
+        <td>{{player.sac}}</td>
+        <td>{{player.sf}}</td>
+    </tr>
+{% endfor %}
+
+  </tbody>
+</table>
+</table>
+
+
+
+
+    {% endblock %}
