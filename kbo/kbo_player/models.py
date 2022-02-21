@@ -53,3 +53,24 @@ class Player(models.Model):
     rbi = models.TextField(db_column='RBI', blank=True, null=True)  # Field name made lowercase.
     sac = models.TextField(db_column='SAC', blank=True, null=True)  # Field name made lowercase.
     sf = models.TextField(db_column='SF', blank=True, null=True)  # Field name made lowercase.
+
+class Player2(models.Model):
+    순위 = models.TextField(blank=True, null=True)
+    선수명 = models.TextField(blank=True, primary_key=True)
+    팀명 = models.TextField(blank=True, null=True)
+    era = models.TextField(db_column='ERA', blank=True, null=True)  # Field name made lowercase.
+    g = models.TextField(db_column='G', blank=True, null=True)  # Field name made lowercase.
+    w = models.TextField(db_column='W', blank=True, null=True)  # Field name made lowercase.
+    l = models.TextField(db_column='L', blank=True, null=True)  # Field name made lowercase.
+    sv = models.TextField(db_column='SV', blank=True, null=True)  # Field name made lowercase.
+    hld = models.TextField(db_column='HLD', blank=True, null=True)  # Field name made lowercase.
+    wpct = models.TextField(db_column='WPCT', blank=True, null=True)  # Field name made lowercase.
+    ip = models.TextField(db_column='IP', blank=True, null=True)  # Field name made lowercase.
+    h = models.TextField(db_column='H', blank=True, null=True)  # Field name made lowercase.
+    hr = models.TextField(db_column='HR', blank=True, null=True)  # Field name made lowercase.
+    bb = models.TextField(db_column='BB', blank=True, null=True)  # Field name made lowercase.
+    hbp = models.TextField(db_column='HBP', blank=True, null=True)  # Field name made lowercase.
+    so = models.TextField(db_column='SO', blank=True, null=True)  # Field name made lowercase.
+    r = models.TextField(db_column='R', blank=True, null=True)  # Field name made lowercase.
+    er = models.TextField(db_column='ER', blank=True, null=True)  # Field name made lowercase.
+    whip = models.TextField(db_column='WHIP', blank=True, null=True)  # Field name made lowercase.

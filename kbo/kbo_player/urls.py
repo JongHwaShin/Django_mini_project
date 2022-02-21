@@ -12,4 +12,5 @@ urlpatterns = [
     path('player/<int:pk>/comment/',views.add_comment_to_player,name='add_comment_to_player'),
     path('comment/<int:pk>/remove/',views.comment_remove,name='comment_remove'),
     path('player/kbo_batter_list/',views.kbo_batter_list,name='kbo_batter_list'),
+    path('player/kbo_pitcher_list/',views.kbo_pitcher_list,name='kbo_pitcher_list'),
 ]

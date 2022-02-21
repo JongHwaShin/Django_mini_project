@@ -1,7 +1,7 @@
 
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Kboplayer,Comment,Player
+from .models import Kboplayer,Comment,Player,Player2
 from .forms import PlayerForm,CommentForm
 
 
@@ -16,6 +16,9 @@ def kbo_money_list(request):
 def kbo_batter_list(request):
     kbo_batter = Player.objects.all()
     return render(request,'kbo_player/kbo_batter_list.html',{'batters':kbo_batter})
+def kbo_pitcher_list(request):
+    kbo_pitcher = Player2.objects.all()
+    return render(request,'kbo_player/kbo_pitcher_list.html',{'pitchers':kbo_pitcher})
 
 def kbo_player_detail(request,pk): #선수상세목록
     player_detail = Kboplayer.objects.get(pk=pk)
