@@ -95,5 +95,62 @@ TOP |타자 TOP30 투수 TOP20 조회 가능   | KBO 페이지에서 가져온 �
   * r  // 실점
   * er // 자책점
   * whip // 인닝당 출루허용률
+  
+### 화면
+ 
+* 등록선수 list 및 조회 
+ 
+<img width="1239" alt="등록 선수 list 조회 및 홈화면" src="https://user-images.githubusercontent.com/98075696/163549744-70cecbdd-92a7-4383-95dd-bf3380cb6e5f.png">
+
+* 선수 등록
+
+<img width="1194" alt="선수등록" src="https://user-images.githubusercontent.com/98075696/163550024-de07cffb-2f44-41ed-bc5b-fe49156c2055.png">
+
+
+* 선수 상세정보 조회 및 댓글 확인
+
+<img width="1269" alt="선수 상세정보 조회 및 댓글 확인" src="https://user-images.githubusercontent.com/98075696/163550139-9c0bf452-38af-4a1a-b75d-6979dc1132b6.png">
+
+* 댓글 작성
+
+<img width="1263" alt="댓글작성" src="https://user-images.githubusercontent.com/98075696/163550170-d2243a16-d532-4351-b018-a3df7d52cd06.png">
+
+* 등록 선수 연봉 순위 확인
+
+<img width="1241" alt="등록 선수 연봉 순위 확인" src="https://user-images.githubusercontent.com/98075696/163550215-1f0db809-1454-43d1-b3d7-5e0c523cd8da.png">
+
+* 타자 TOP 30 조회
+
+
+<img width="1332" alt="타자 TOP 30 조회(1)" src="https://user-images.githubusercontent.com/98075696/163550285-3194ce69-18bf-42f8-b859-fd7ec825aef8.png">
+
+
+<img width="1221" alt="타자 TOP 30 조회 (2)" src="https://user-images.githubusercontent.com/98075696/163550353-e3e9bb75-6d56-4cd1-a508-1fa60dea11c2.png">
+
+
+* 투수 TOP 20 조회
+
+
+<img width="1288" alt="투수 TOP 20 조회 (1)" src="https://user-images.githubusercontent.com/98075696/163550408-eae91507-123c-496e-aad9-f72fce6e8ea9.png">
+<img width="1217" alt="투수 TOP 20 조회 (2)" src="https://user-images.githubusercontent.com/98075696/163550434-bd1870f7-290b-4b79-a6e1-916ff85c1708.png">
+
+
+### DB 테이블 구성
+
+* 등록 선수 테이블 
+
+<img width="1056" alt="등록 선수 테이블" src="https://user-images.githubusercontent.com/98075696/163550511-03ff7e05-e683-45c4-bb6d-72ad87922abf.png">
+
+* 댓글 테이블
+
+<img width="935" alt="댓글 테이블" src="https://user-images.githubusercontent.com/98075696/163550550-7fc1d634-c378-4ae6-be61-1b4297604b3b.png">
+
+* 타자 TOP 30 테이블
+
+<img width="1019" alt="타자 TOP 30 테이블" src="https://user-images.githubusercontent.com/98075696/163550583-c343bf74-4f9c-45b0-b136-7397304e9df2.png">
+
+* 투수 TOP 20 테이블
+
+<img width="1133" alt="투수 TOP 20 테이블" src="https://user-images.githubusercontent.com/98075696/163550642-7b6e6fc0-4c77-4ac2-ac53-f43de192b4bc.png">
 
 
